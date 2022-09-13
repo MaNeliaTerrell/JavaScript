@@ -126,13 +126,13 @@ console.log("Hello, my name is " + yourName + ".")
 
 // for(let i = 1; i <= 100; i++){
 //     if(i % 3 === 0 && i % 5 === 0){
-        // console.log(`I found a ${i}. High five! There is a crowd`);
+// console.log(`I found a ${i}. High five! There is a crowd`);
 //     }else if(i % 5 === 0) {
-        // console.log(`I found a ${i}. High five!`);
+// console.log(`I found a ${i}. High five!`);
 //     }else if(i % 3 === 0){
 //         console.log(`I found a ${i}. Three is a crowd`);
 //     } else {
-      // console.log(i);
+// console.log(i);
 //     }
 // }
 
@@ -144,7 +144,7 @@ console.log("Hello, my name is " + yourName + ".")
 // for(i = 0; i <= 10; i++){
 // bank_account += i
 // }
-      // console.log(bank_account)
+// console.log(bank_account)
 
 // // 2. You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers 
 // // between 1 - 100 multiplied by 2.
@@ -154,17 +154,17 @@ console.log("Hello, my name is " + yourName + ".")
 // for(i = 0; i <= 100; i++){
 // bank_account2 += i*2
 // }
-    // console.log(bank_account2)
+// console.log(bank_account2)
 
 // III. Arrays & Control flow
 
 // A. Talk about it:
 // What are the things in an array called?
-        // elements
+// elements
 // Do Arrays guarantee those things will be in order?
-        //  No
+//  No
 // What real-life thing could you model with an array?
-        // a row of books, a column of chairs
+// a row of books, a column of chairs
 
 // B. Easy Does It
 // Create an array that contains three quotes and store it in a variable called quotes
@@ -218,7 +218,7 @@ console.log("Hello, my name is " + yourName + ".")
 
 // Given the following array: 
 
-// const myArray = [5, 10, 500, 20]
+ const myArray = [5, 10, 500, 20]
 
 // Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
 
@@ -296,7 +296,7 @@ myArray.pop()
 //     "yellow knit hat",
 //     "marshmallow peeps"
 //   ];
-  
+
 //   // Thom's closet is more complicated. Check out this nested data structure!!
 //   const thomsCloset = [
 //     [
@@ -429,16 +429,16 @@ myArray.pop()
 
 const maxOfThree = (a, b, c) => {
 
-// return Math.max(a, b, c );
+  // return Math.max(a, b, c );
 
-//  but preferred: 
-  if (a > b && a > c){
+  //  but preferred: 
+  if (a > b && a > c) {
     return a;
-  } else if(a < c && b < c) {
+  } else if (a < c && b < c) {
     return c;
-  }else if(a == b || a === c || b === c){
+  } else if (a == b || a === c || b === c) {
     return a || b || c
-  }else{
+  } else {
     return b;
   };
 }
@@ -450,18 +450,23 @@ const maxOfThree = (a, b, c) => {
 // return the longest word in the array. In case of a tie, 
 // the method should return the word that appears first in the array.
 
-    function printLongestWord(array) {
-      return array.reduce((a, b) => {
-      if(a.length == b.length) {
-        return (a.length)
-      }else{
-        a.length >= b.length ? b : a
-      }
-      }
+
+function printLongestWord(array) {
+  let max_str = array[0].length;
+  let ans = array[0];
+  for (let i = 1; i < array.length; i++) {
+    let maxi = array[i].length; 
+    if (maxi == array[0]) { 
+      ans = array[0]; 
+    } else if (maxi > max_str) {
+      ans = array[i];
+      max_str = maxi;
     }
-  // const printLongestWord = ([a, b, c, d, e, f, g, h]) => {
-  //   return Math.max(a.length, b.length, c. length, d.length, e.length, f.length, g.length, h.length) 
-  console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+  }
+  return ans;
+}
+
+console.log(printLongestWord(["BoJack","Peanutbuttes", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 
 
@@ -529,9 +534,9 @@ user.purchased.push("Merino jodhpurs")
 
 // Write a friend object into your userobject and give the friend a name, age, location, and purchased array (empty for now)
 
-user.friend ={
+user.friend = {
   name: "Gabby",
-  age:  17,
+  age: 17,
   location: "Asheville",
   purchased: [],
 }
@@ -566,17 +571,17 @@ user.friend.purchased.push("A Latte")
 // Write a for loop that iterates over the User's purchased array (NOT the friend's purchased array), and prints each element to the console.
 
 // for(let i = 0; i <= user.purchased.length -1; i++)
-  // console.log(user.purchased[i]);
+// console.log(user.purchased[i]);
 
 // Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
 
 // for(let i = 0; i <= user.friend.purchased.length -1; i++)
-  // console.log(user.friend.purchased[i]);
+// console.log(user.friend.purchased[i]);
 
-  // G. Functions can operate on objects
-  // Write a single function updateUser that takes no parameters. When the function is run, it should:
-  // it should increment the user's age by 1
-  // make the user's name uppercase
+// G. Functions can operate on objects
+// Write a single function updateUser that takes no parameters. When the function is run, it should:
+// it should increment the user's age by 1
+// make the user's name uppercase
 
 // function updateUser(){
 //   // user.age++
@@ -616,12 +621,12 @@ const cat1 = {
   breed: "Persian",
   age: 5
 }
-  // console.log(cat1.age);
-  // console.log(cat1.breed);
+// console.log(cat1.age);
+// console.log(cat1.breed);
 
-  // 2. Papa cat
-  // Define an object called cat2 that also contains the properties:
-  
+// 2. Papa cat
+// Define an object called cat2 that also contains the properties:
+
 const cat2 = {
   name: "Oreo",
   breed: "Ragdoll",
@@ -634,7 +639,7 @@ const cat2 = {
 // The function will take two arguments -- each a cat object.
 // Pass cat1 and cat2as arguments to the combineCats function. The function should console.log them.
 
-function combineCats(mama, papa){
+function combineCats(mama, papa) {
   return [mama, papa]
 }
 //  console.log(combineCats(cat1, cat2))
