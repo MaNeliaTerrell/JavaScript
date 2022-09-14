@@ -92,17 +92,17 @@
 // and runs the callback on each element of the array. recreateforEach 
 // does not return anything. Please do not use the native forEach or map method.
 
-const recreateForEach = (array, callback) => {
-for(i = 0; i < array.length; i++){
-    callback(array[i]); //call the callback function on
-                        //each element in array
-}
-}
-let alphabet = '';
-const letters = ['a', 'b', 'c', 'd'];
-recreateForEach(letters, function(char) {
-alphabet += char;
-});
-console.log(alphabet); //prints 'abcd'
-console.log(typeof recreateForEach); // should log: 'function'
-recreateForEach(['a','b','c'], i => console.log(i)); // should log: 'a', 'b', 'c'
+// const recreateForEach = (array, callback) => {
+// for(i = 0; i < array.length; i++){
+//     callback(array[i]); //call the callback function on
+//                         //each element in array
+// }
+// }
+// let alphabet = '';
+// const letters = ['a', 'b', 'c', 'd'];
+// recreateForEach(letters, function(char) {
+// alphabet += char;
+// });
+// console.log(alphabet); //prints 'abcd'
+// console.log(typeof recreateForEach); // should log: 'function'
+// recreateForEach(['a','b','c'], i => console.log(i)); // should log: 'a', 'b', 'c'
